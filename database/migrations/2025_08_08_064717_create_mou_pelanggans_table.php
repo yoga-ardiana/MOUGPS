@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('mou_pelanggans', function (Blueprint $table) {
             $table->id();
+            $table->string('namaPelanggan');
+            $table->string('email')->nullable();
+            $table->text('deskripsiProduk');
+            $table->text('note');
+            $table->string('telp');
             $table->timestamps();
         });
     }
